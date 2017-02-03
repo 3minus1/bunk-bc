@@ -1,0 +1,90 @@
+<html>
+
+<head>
+	<title>Bunk-Off</title>
+
+
+	 <!--Import Google Icon Font-->
+     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     
+	 <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+
+     <!--Let browser know website is optimized for mobile-->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+     <!--Import jQuery before materialize.js-->
+     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+
+   
+</head>
+
+
+<body>
+  
+
+<div class="navbar-fixed">
+	<nav>
+	    <div class="nav-wrapper">
+	      <a href="/" class="brand-logo">Bunk BC</a>
+	      <ul id="nav-mobile" class="right hide-on-med-and-down">
+	        <li><a href="about-us.html">About Us</a></li>
+	        <li><a href="contact.html">Contact</a></li>
+	      </ul>
+	    </div>
+	</nav>
+</div>
+<br/>
+<br/>
+<br/><br/><br/><br/><br/>
+<br/>
+
+<center><p>Enter the details to know how many more classes you need to attend or can affort to bunk</p></center>
+<hr/>
+<div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="present" type="text" class="validate">
+          <label for="present">Classes Attended</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="conducted" type="text" class="validate">
+          <label for="conducted">Classes Conducted</label>
+        </div>
+      </div>
+      <hr/>
+      <script>
+     	
+     function calculate()
+     {
+     	var conducted = parseInt(document.getElementById("conducted").value);
+     	var present = parseInt(document.getElementById("present").value);
+     	var min_att = 75;
+     	
+     	var classes_to_attend = (((min_att/100)*conducted) - present) / ((100-min_att)/100);
+     	var classes_bunkable = (present - (min_att/100*conducted))/(min_att/100);
+     	
+     	if(classes_to_attend > 0)
+     		document.getElementById("classes_to_attend").innerHTML = "You need to attend " + Math.ceil(classes_to_attend) + " hours of classes";
+     	else
+     		document.getElementById("classes_to_attend").innerHTML = "You can afford to bunk " + Math.floor(classes_bunkable) + " hours of classes";
+     }
+
+     </script>
+      <button onClick="calculate()" class="btn waves-effect waves-light btn-large col m12 l12 s12" type="button" name="action">Bunk Off!
+   		 <i class="material-icons right">send</i>
+  	  </button>
+    </form>
+  </div>
+
+ <h3 id="classes_to_attend"></h3>
+
+
+
+</body>
+
+</html>
