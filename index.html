@@ -3,6 +3,7 @@
 <head>
 	<title>BunkBC</title>
 
+     <link rel="stylesheet" href="/style.css">
 
 	 <!--Import Google Icon Font-->
      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -46,6 +47,29 @@
 <hr/>
 <div class="row">
     <form class="col s12">
+      <div class="percentages">
+        <div class="percentage">
+          <input class="with-gap" name="percs" type="radio" id="75" />
+          <label for="75">75%</label>
+        </div>
+        <div class="percentage">
+          <input class="with-gap" name="percs" type="radio" id="80" />
+          <label for="80">80%</label>
+        </div>
+        <div class="percentage">
+          <input class="with-gap" name="percs" type="radio" id="85" />
+          <label for="85">85%</label>
+        </div>
+        <div class="percentage">
+          <input class="with-gap" name="percs" type="radio" id="90" />
+          <label for="90">90%</label>
+        </div> 
+        <div class="percentage">
+          <input class="with-gap" name="percs" type="radio" id="95"  />
+          <label for="95">95%</label>
+        </div>
+      </div>
+      <br/><br/><br/>
       <div class="row">
         <div class="input-field col s6">
           <input id="present" type="text" class="validate">
@@ -61,6 +85,7 @@
      	
      function calculate()
      {
+
      	var conducted = parseInt(document.getElementById("conducted").value);
      	var present = parseInt(document.getElementById("present").value);
      	var min_att = 75;
@@ -72,6 +97,7 @@
      		document.getElementById("classes_to_attend").innerHTML = "You need to attend " + Math.ceil(classes_to_attend) + " hours of classes";
      	else
      		document.getElementById("classes_to_attend").innerHTML = "You can afford to bunk " + Math.floor(classes_bunkable) + " hours of classes";
+     	
      }
 
      </script>
