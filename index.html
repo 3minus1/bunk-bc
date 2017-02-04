@@ -38,10 +38,8 @@
 	    </div>
 	</nav>
 </div>
-<br/>
-<br/>
-<br/><br/><br/><br/><br/>
-<br/>
+<center><h4  class="current_attendance" id="current_attendance"></h4><h4 id="per"> </h4></center>
+
 
 <center><p>Enter the details to know how many more classes you need to attend or can affort to bunk</p></center>
 <hr/>
@@ -49,23 +47,23 @@
     <form class="col s12">
       <div class="percentages">
         <div class="percentage">
-          <input class="with-gap" name="percs" type="radio" id="75" />
+          <input class="with-gap" name="min_att" type="radio" id="75" value="75" />
           <label for="75">75%</label>
         </div>
         <div class="percentage">
-          <input class="with-gap" name="percs" type="radio" id="80" />
+          <input class="with-gap" name="min_att" type="radio" id="80" value="80" />
           <label for="80">80%</label>
         </div>
         <div class="percentage">
-          <input class="with-gap" name="percs" type="radio" id="85" />
+          <input class="with-gap" name="min_att" type="radio" id="85" value="85" checked />
           <label for="85">85%</label>
         </div>
         <div class="percentage">
-          <input class="with-gap" name="percs" type="radio" id="90" />
+          <input class="with-gap" name="min_att" type="radio" value="90" id="90" />
           <label for="90">90%</label>
         </div> 
         <div class="percentage">
-          <input class="with-gap" name="percs" type="radio" id="95"  />
+          <input class="with-gap" name="min_att" type="radio" value="95" id="95"  />
           <label for="95">95%</label>
         </div>
       </div>
@@ -88,7 +86,15 @@
 
      	var conducted = parseInt(document.getElementById("conducted").value);
      	var present = parseInt(document.getElementById("present").value);
-     	var min_att = 75;
+     	var min_att = document.getElementsByTagName("form")[0].elements["min_att"].value;
+      if(present > conducted)
+      {
+          document.getElementById("classes_to_attend").innerHTML = "Dude! Are you a human or what?!";
+          document.getElementById("current_attendance").innerHTML = "Current Attendance: ";
+          document.getElementById("per").innerHTML = "Whoa!";
+          document.getElementById("per").style["color"] = "F0800F";
+          return;
+      }
      	
      	var classes_to_attend = (((min_att/100)*conducted) - present) / ((100-min_att)/100);
      	var classes_bunkable = (present - (min_att/100*conducted))/(min_att/100);
@@ -97,6 +103,16 @@
      		document.getElementById("classes_to_attend").innerHTML = "You need to attend " + Math.ceil(classes_to_attend) + " hours of classes";
      	else
      		document.getElementById("classes_to_attend").innerHTML = "You can afford to bunk " + Math.floor(classes_bunkable) + " hours of classes";
+      var current_attendance = present/conducted*100;
+      document.getElementById("current_attendance").innerHTML = "Current Attendance: ";
+      document.getElementById("per").innerHTML = current_attendance.toFixed(2) + "%";
+      if(current_attendance>85)
+          document.getElementById("per").style["color"] = "#46BD36";
+      else if(current_attendance>75)
+          document.getElementById("per").style["color"] = "#DACA40";
+      else 
+          document.getElementById("per").style["color"] = "#C70039";
+      
      	
      }
 
@@ -107,7 +123,7 @@
     </form>
   </div>
 
- <h3 id="classes_to_attend"></h3>
+ <center><h3 id="classes_to_attend"></h3></center>
 
 
 
