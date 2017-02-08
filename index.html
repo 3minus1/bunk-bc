@@ -7,7 +7,7 @@
 
 	 <!--Import Google Icon Font-->
      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-     
+
 	 <!-- Compiled and minified CSS -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
 
@@ -16,20 +16,19 @@
 
      <!--Import jQuery before materialize.js-->
      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      
+
      <!-- Compiled and minified JavaScript -->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
 
-   
+
 </head>
 
 
 <body>
-  
 
 <div class="navbar-fixed">
 	<nav>
-	    <div class="nav-wrapper">
+	    <div class="nav-wrapper container">
 	      <a href="/" class="brand-logo">BunkBC</a>
 	      <ul id="nav-mobile" class="right hide-on-med-and-down">
 	        <li><a href="about-us.html">About Us</a></li>
@@ -38,31 +37,37 @@
 	    </div>
 	</nav>
 </div>
-<center><h4  class="current_attendance" id="current_attendance"></h4><h4 id="per"> </h4></center>
+<div class="container">
+
+	<center><h4  class="current_attendance" id="current_attendance"></h4><h4 id="per"> </h4></center>
 
 
-<center><p>Enter the details to know how many more classes you need to attend or can affort to bunk</p></center>
-<hr/>
+	<center><p>Enter the details to know how many more classes you need to attend or can affort to bunk</p></center>
+	<hr/>
 <div class="row">
     <form class="col s12">
-      <div class="percentages">
-        <div class="percentage">
+      <div class="percentages row">
+				<div class="percentage col s6 m1 l1 offset-m3 offset-l3">
+          <input class="with-gap" name="min_att" type="radio" id="70" value="70" />
+          <label for="70">70%</label>
+        </div>
+				<div class="percentage col s6 m1 l1">
           <input class="with-gap" name="min_att" type="radio" id="75" value="75" />
           <label for="75">75%</label>
         </div>
-        <div class="percentage">
+        <div class="percentage col s6 m1 l1">
           <input class="with-gap" name="min_att" type="radio" id="80" value="80" />
           <label for="80">80%</label>
         </div>
-        <div class="percentage">
+        <div class="percentage col s6 m1 l1">
           <input class="with-gap" name="min_att" type="radio" id="85" value="85" checked />
           <label for="85">85%</label>
         </div>
-        <div class="percentage">
+        <div class="percentage col s6 m1 l1">
           <input class="with-gap" name="min_att" type="radio" value="90" id="90" />
           <label for="90">90%</label>
-        </div> 
-        <div class="percentage">
+        </div>
+        <div class="percentage col s6 m1 l1">
           <input class="with-gap" name="min_att" type="radio" value="95" id="95"  />
           <label for="95">95%</label>
         </div>
@@ -80,7 +85,7 @@
       </div>
       <hr/>
       <script>
-     	
+
      function calculate()
      {
 
@@ -95,10 +100,10 @@
           document.getElementById("per").style["color"] = "F0800F";
           return;
       }
-     	
+
      	var classes_to_attend = (((min_att/100)*conducted) - present) / ((100-min_att)/100);
      	var classes_bunkable = (present - (min_att/100*conducted))/(min_att/100);
-     	
+
      	if(classes_to_attend > 0)
      		document.getElementById("classes_to_attend").innerHTML = "You need to attend " + Math.ceil(classes_to_attend) + " hours of classes";
      	else
@@ -110,10 +115,10 @@
           document.getElementById("per").style["color"] = "#46BD36";
       else if(current_attendance>75)
           document.getElementById("per").style["color"] = "#DACA40";
-      else 
+      else
           document.getElementById("per").style["color"] = "#C70039";
-      
-     	
+
+
      }
 
      </script>
@@ -125,8 +130,7 @@
 
  <center><h3 id="classes_to_attend"></h3></center>
 
-
-
+</div>
 </body>
 
 </html>
