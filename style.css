@@ -1,3 +1,5 @@
+ @import url('https://fonts.googleapis.com/css?family=Pacifico');
+
 .percentages{
 	/*display: inline-block;
 	padding-left: 31%;
@@ -6,15 +8,87 @@
 	max-width: 480px; */
 	margin-left: auto;
   margin-right: auto;
-  display: table;
-	
+
+}
+
+.left-form {
+	padding-right: 10px;
 }
 
 .percentage{
-	display: inline;
-	padding-right: 4%;
 }
 
-.current_attendance{
-	padding-top: 10%;
+
+.inner-container {
+	max-width: 700px;
+	margin: 0px auto;
+	padding: 20px 40px;
+	background: #efefef;
+}
+body{
+	background: #002a5c;
+	color: #7e7e7e;
+}
+.logo-container {
+	font-family: "Pacifico",sans-serif;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	text-align: center;
+font-size: 40px;
+}
+.logo-container a, .logo-container a, .logo-container {
+	color: #fff;
+}
+
+.info {
+	text-align: center;
+	margin-bottom: 20px;
+}
+.btn, .btn-large {
+	background-color: #bf6921;
+}
+
+.btn:hover, .btn-large:hover, .btn:focus, .btn-large:focus, .btn:active, .btn-large:active {
+	background-color: #7e5c2e;
+}
+input[type="radio"].with-gap:checked + label:before {
+	border-radius: 50%;
+	border: 2px solid #bf6921;
+}
+
+input[type="radio"].with-gap:checked + label:after {
+	border-radius: 50%;
+	border: 2px solid #bf6921;
+	background-color: #bf6921;
+}
+
+input:focus:not([type]):not([readonly]), input[type="text"]:focus:not([readonly]), input[type="password"]:focus:not([readonly]), input[type="email"]:focus:not([readonly]), input[type="url"]:focus:not([readonly]) {
+	border-bottom: 1px solid #bf6921;
+	box-shadow: 0 1px 0 0 #bf6921;
+}
+input:focus:not([type]):not([readonly])+label, input[type="text"]:focus:not([readonly])+label, input[type="password"]:focus:not([readonly])+label, input[type="email"]:focus:not([readonly])+label, input[type="url"]:focus:not([readonly])+label {
+	color: #bf6921;
+}
+
+.footer {
+	margin-top: 20px;
+	margin-bottom: 30px;
+	color: #efefef;
+	max-width: 700px;
+	margin: 0px auto;
+	padding: 20px 40px;
+}
+.footer a {
+	color: #efefef;
+}
+.footer a:hover {
+	color: #efefef;
+}
+#current_attendance {
+	margin-top: 50px;
+}
+#per {
+	font-size: 50px;
+	margin-top: 60px;
+	margin-bottom: 60px;
 }
