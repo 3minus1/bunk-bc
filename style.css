@@ -1,5 +1,9 @@
  @import url('https://fonts.googleapis.com/css?family=Pacifico');
 
+.outer-container{
+	padding-top: 3%;
+}
+
 .percentages{
 	/*display: inline-block;
 	padding-left: 31%;
