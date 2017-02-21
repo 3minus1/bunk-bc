@@ -74,6 +74,12 @@ input:focus:not([type]):not([readonly])+label, input[type="text"]:focus:not([rea
 	color: #bf6921;
 }
 
+
+
+
+
+
+
 .footer {
 	margin-top: 20px;
 	margin-bottom: 30px;
@@ -96,3 +102,10 @@ input:focus:not([type]):not([readonly])+label, input[type="text"]:focus:not([rea
 	margin-top: 60px;
 	margin-bottom: 60px;
 }
+
+
+
+body {
+  padding: 100px;
+}
+
