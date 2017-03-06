@@ -2,6 +2,7 @@
 
 .outer-container{
 	padding-top: 3%;
+
 }
 
 .percentages{
@@ -22,6 +23,31 @@
 .percentage{
 }
 
+
+.card-panel{
+	color: #fff;
+	background-color: #bf6921;
+	padding-top: 10% !important;
+	padding-bottom: 10% !important;
+	padding-left: 30% !important;
+	padding-right: 30% !important;
+	text-align: center;
+	border: none;
+}
+
+.card-panel:hover, .card-panel:focus, .card-panel:active{
+	background-color: #7e5c2e;
+}
+
+
+
+.active-btn{
+	background-color: #7e5c2e;
+}
+
+.switch{
+	padding-bottom: 1.5%;
+}
 
 .inner-container {
 	max-width: 1200px;

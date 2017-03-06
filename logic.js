@@ -1,4 +1,28 @@
 
+
+min_att="";
+
+$(document).ready(function(){
+
+  min_att = $(".active-btn").text();
+
+$(".card-panel").on("click",function(e){
+
+
+  $(".card-panel").each(function(){
+    this.classList.remove("active-btn");
+  });
+
+  e.target.classList.add("active-btn");
+  min_att = $(".active-btn").text();
+  console.log(min_att);
+
+});  
+});
+
+
+
+
 function Cocurricular_Field()
 {
   //alert(document.getElementById("co_leaves").checked);
@@ -35,11 +59,13 @@ function Cocurricular_Field()
 
 function calculate()
 {
+  min_att = min_att.substring(0,2);
+  console.log("MIN ATT: "+min_att);
 
 var conducted = parseInt(document.getElementById("conducted").value);
 var present = parseInt(document.getElementById("present").value);
 //var min_att = document.getElementsByTagName("form")[0].elements["min_att"].value;
-var min_att = 75;
+//var min_att = 75;
 if(present > conducted)
 {
 		document.getElementById("classes_to_attend").innerHTML = "Dude! Are you a human or what?!";
