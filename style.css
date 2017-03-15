@@ -1,9 +1,37 @@
  @import url('https://fonts.googleapis.com/css?family=Pacifico');
 
+.side-nav .divider{
+	margin: 0 !important;
+}
+
+
+.userView{
+	text-align: center;
+}
+
+.side-nav .userView .circle{
+	height: 120px !important;
+	width: 120px !important;
+}
+
+.about{
+	padding: 5% 2% 2% 11%;
+}
+
+.circle{
+	margin-left: 26% !important;
+}
+
+.links{
+}
+
+
 .outer-container{
 	padding-top: 3%;
 
 }
+
+
 
 .button-collapse{
 	float: left;
