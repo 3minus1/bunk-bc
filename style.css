@@ -5,6 +5,22 @@
 
 }
 
+.button-collapse{
+	float: left;
+}
+
+.material-icons{
+	font-size: 42px;
+}
+
+.logo-container{
+	padding-top: 2%;
+}
+
+.brand-logo{
+	padding-right: 6%;
+}
+
 .percentages{
 	/*display: inline-block;
 	padding-left: 31%;
@@ -40,6 +56,22 @@
 }
 
 
+.switch label input[type="checkbox"]:checked + .lever::after {
+    background-color: #f2f5ea !important;
+}
+
+.switch label input[type="checkbox"]:checked + .lever{
+	background-color: #e75a7c !important;
+}
+
+input[type="text"]:focus:not([readonly]) + label {
+	color: #e75a7c !important; 
+}
+
+input[type="text"]:focus:not([readonly]){
+	border-bottom: 1px solid #e75a7c !important;
+	box-shadow: 0 1px 0 0 #e75a7c !important;
+}
 
 .active-btn{
 	background-color: #7e5c2e;
@@ -50,14 +82,14 @@
 }
 
 .inner-container {
-	max-width: 1200px;
-	min-height: 600px;
+    max-width: 700px;
 	margin: 0px auto;
-	padding: 20px 40px;
-	background: #efefef;
+	padding: 20px 40px ;
+	background: #f2f5ea;
+	box-shadow: 10px 10px 5px #888888;
 }
 body{
-	background: #002a5c;
+	background: #323232;
 	color: #7e7e7e;
 }
 .logo-container {
@@ -76,29 +108,30 @@ font-size: 40px;
 	margin-bottom: 20px;
 }
 .btn, .btn-large {
-	background-color: #bf6921;
+	background-color: #323232 !important;
+	margin-top: 2%;
 }
 
 .btn:hover, .btn-large:hover, .btn:focus, .btn-large:focus, .btn:active, .btn-large:active {
-	background-color: #7e5c2e;
+	background-color: #868686 !important;
 }
 input[type="radio"].with-gap:checked + label:before {
 	border-radius: 50%;
-	border: 2px solid #bf6921;
+	border: 2px solid #e75a7c;
 }
 
 input[type="radio"].with-gap:checked + label:after {
 	border-radius: 50%;
-	border: 2px solid #bf6921;
-	background-color: #bf6921;
+	border: 2px solid #e75a7c;
+	background-color: #e75a7c;
 }
 
 input:focus:not([type]):not([readonly]), input[type="text"]:focus:not([readonly]), input[type="password"]:focus:not([readonly]), input[type="email"]:focus:not([readonly]), input[type="url"]:focus:not([readonly]) {
-	border-bottom: 1px solid #bf6921;
-	box-shadow: 0 1px 0 0 #bf6921;
+	border-bottom: 1px solid #e75a7c;
+	box-shadow: 0 1px 0 0 #e75a7c;
 }
 input:focus:not([type]):not([readonly])+label, input[type="text"]:focus:not([readonly])+label, input[type="password"]:focus:not([readonly])+label, input[type="email"]:focus:not([readonly])+label, input[type="url"]:focus:not([readonly])+label {
-	color: #bf6921;
+	color: #e75a7c;
 }
 
 
