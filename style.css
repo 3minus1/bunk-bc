@@ -1,4 +1,14 @@
  @import url('https://fonts.googleapis.com/css?family=Pacifico');
+ @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+.fa{
+	margin-right: 40px !important;
+}
+
+.radio-button {
+    padding-left: 24px !important;
+}
 
 .side-nav .divider{
 	margin: 0 !important;
@@ -16,6 +26,7 @@
 
 .about{
 	padding: 5% 2% 2% 11%;
+
 }
 
 .circle{
@@ -27,14 +38,22 @@
 
 
 .outer-container{
-	padding-top: 3%;
+	margin-top: 4%;
 
 }
 
+.about-footer{
+	font-size: 10px;
+	padding: 8% 4% 2% 11%;
 
+}
 
+.container{
+	width: 49% !important;
+}
 .button-collapse{
 	float: left;
+	padding-top: 1%;
 }
 
 .material-icons{
@@ -42,7 +61,12 @@
 }
 
 .logo-container{
-	padding-top: 2%;
+	padding-top: 4%;
+
+}
+
+.show_attendance{
+	margin-top:8%;
 }
 
 .brand-logo{
@@ -57,6 +81,8 @@
 	max-width: 480px; */
 	margin-left: auto;
   margin-right: auto;
+  padding-bottom: 3%;
+  margin-top: 13%;
 
 }
 
@@ -65,6 +91,7 @@
 }
 
 .percentage{
+	padding-right: 16% !important; 
 }
 
 
@@ -106,7 +133,7 @@ input[type="text"]:focus:not([readonly]){
 }
 
 .switch{
-	padding-bottom: 1.5%;
+	padding-bottom: 8%;
 }
 
 .inner-container {
@@ -117,10 +144,14 @@ input[type="text"]:focus:not([readonly]){
 	box-shadow: 10px 10px 5px #888888;
 }
 body{
+
+	font-family: "Montserrat",sans-serif;
 	background: #323232;
 	color: #7e7e7e;
+
 }
 .logo-container {
+
 	font-family: "Pacifico",sans-serif;
 	margin-top: 30px;
 	margin-bottom: 20px;
